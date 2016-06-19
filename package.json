@@ -2,6 +2,9 @@
   "name": "EmptyProject",
   "version": "0.0.1",
   "description": "Projeto vazio de nodejs",
+  "engines": {
+    "node": "6.2.0"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

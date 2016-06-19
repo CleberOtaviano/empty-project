@@ -10,7 +10,7 @@ var MONGODB_USER = process.env.MONGODB_USER;
 var MONGODB_PASSWORD = process.env.MONGODB_PASSWORD;
 
 // Build the connection string
-var dbURI = 'mongodb://'+ MONGODB_USER +':' + MONGODB_PASSWORD +'@'+MONGODB_HOST+':'+MONGODB_PORT+'/'+MONGODB_DATABASE;
+var dbURI = 'mongodb://AdminEstampeiroUser:EsTampeiroSenhaDB123@'+MONGODB_HOST+':'+MONGODB_PORT+'/estampeirodb';
 
 // Create the database connection
 mongoose.connect(dbURI);

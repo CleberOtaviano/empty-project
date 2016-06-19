@@ -3,9 +3,14 @@ var app = express();
 
 // Bring Mongoose into the app
 var mongoose = require( 'mongoose' );
+const MONGODB_HOST = process.env.MONGODB_SERVICE_HOST;
+const MONGODB_PORT = process.env.MONGODB_SERVICE_PORT;
+const MONGODB_DATABASE = process.env.MONGODB_DATABASE;
+const MONGODB_USER = process.env.MONGODB_USER;
+const MONGODB_PASSWORD = process.env.MONGODB_PASSWORD;
 
 // Build the connection string
-var dbURI = 'mongodb://localhost:27017/estampeirodb';
+var dbURI = 'mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_DATABASE}';
 
 // Create the database connection
 mongoose.connect(dbURI);

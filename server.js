@@ -10,7 +10,7 @@ const MONGODB_USER = process.env.MONGODB_USER;
 const MONGODB_PASSWORD = process.env.MONGODB_PASSWORD;
 
 // Build the connection string
-var dbURI = 'mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_DATABASE}';
+var dbURI = 'mongodb://'+ MONGODB_USER +':' + MONGODB_PASSWORD +'@'+MONGODB_HOST+':'+MONGODB_PORT+'/'+MONGODB_DATABASE;
 
 // Create the database connection
 mongoose.connect(dbURI);
@@ -47,5 +47,3 @@ app.get('/', function (req, res) {
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
-
-console.log('------------------------  TESTE  ------------------------',process.env);

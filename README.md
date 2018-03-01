@@ -1,2 +1,2 @@
 # empty-project
-Este é um boilerplate para novos projetos
+Este é um boilerplate para novos projetos.
